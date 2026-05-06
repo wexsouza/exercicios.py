@@ -1,0 +1,17 @@
+papelaria_gastos = [ 2172.54, 3701.35, 3518.09, 3456.61, 3249.38, 2840.82, 3891.45, 3075.26, 2317.64, 3219.08]
+
+soma = 0
+contador = 0
+
+account = len(papelaria_gastos)
+
+for valor in papelaria_gastos:
+    soma += valor
+    if valor >= 3000:
+        contador += 1
+        
+p = (contador / account)*100
+
+print('Resultado é: {:,.2f}'.format(soma / account))
+print('Gastos acima de 3k: {}, totalizando: {}%, das compras'.format(contador, p))
+

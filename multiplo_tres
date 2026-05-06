@@ -1,0 +1,15 @@
+multiplo = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
+
+def verificacao(analise):
+    save_mult = []
+
+    for i in analise:
+
+        if i % 3 == 0:
+            save_mult.append(i)
+            
+    return  save_mult
+
+save_mult = verificacao(multiplo)    
+print(save_mult)
+
