@@ -6,4 +6,3 @@ def concatenacao(nome, sobrenome):
         print('nomes completo: {} {}'.format(n.capitalize(), s.capitalize()))
             
 concatenacao(nomes, sobrenomes)
-
