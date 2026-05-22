@@ -1,18 +1,8 @@
-estados = ['Salvador', 'Fortaleza', 'Natal', 'Aracaju']
-def gasolina(kilometro):
-    gastos_gasolina = 0
-    
-    if kilometro == 'Salvador':
-        gastos_gasolina += kilometro * 5
-    elif kilometro == 'Fortaleza':
-        gastos_gasolina += kilometro * 5
-    elif kilometro == 'Natal':
-        gastos_gasolina += kilometro * 5
-    elif kilometro == 'Aracaju':
-        gastos_gasolina += kilometro * 5
+km = int(input('Para onde será seu destino? '))
 
-    return gastos_gasolina 
-gastos_gasolinia = gasolina(estados)
+gasolina = map(lambda custo_gasolina: custo_gasolina * 150)
+gasolina = list(gasolina)
+
 
 valor_hotel = int(input('Quantos dias você vai passar? '))
 def hotel(diaria):
