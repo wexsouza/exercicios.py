@@ -8,6 +8,7 @@ for i in range(len(notas_turma)):
         nomes.append(notas_turma[i])
     else:
         notas_juntas.append(notas_turma[i])
-
+notas = []
 for i in range(0, len(notas_juntas), 3):
-    
+    notas.append([notas_juntas[i], notas_juntas[i+1], notas_juntas[i+2]])
+print(notas)
