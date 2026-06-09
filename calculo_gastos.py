@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 periodo = int(input('Periodo para hospedagem: '))
 cidade = {'Salvador': 850, 'Fortaleza': 800, 'Natal': 300, 'Aracaju': 550}
 destino = str(input('Qual será seu destino: ')).capitalize()
@@ -6,6 +7,13 @@ valor_passeio = int(input('Passeios pago aparte: '))
 
 hotel = lambda gastos_hotel: (gastos_hotel * 150)
 valor_total = hotel(periodo)
+=======
+km = int(input('Para onde será seu destino? '))
+
+gasolina = map(lambda custo_gasolina: custo_gasolina * 150)
+gasolina = list(gasolina)
+
+>>>>>>> 6f16654e45811c2e52090e136e568032ee24b03d
 
 def gasolina(onde, ask):
     ida = 0
