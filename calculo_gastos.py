@@ -1,35 +1,28 @@
-estados = ['Salvador', 'Fortaleza', 'Natal', 'Aracaju']
-def gasolina(kilometro):
-    gastos_gasolina = 0
-    
-    if kilometro == 'Salvador':
-        gastos_gasolina += kilometro * 5
-    elif kilometro == 'Fortaleza':
-        gastos_gasolina += kilometro * 5
-    elif kilometro == 'Natal':
-        gastos_gasolina += kilometro * 5
-    elif kilometro == 'Aracaju':
-        gastos_gasolina += kilometro * 5
+periodo = int(input('Periodo para hospedagem: '))
+cidade = {'Salvador': 850, 'Fortaleza': 800, 'Natal': 300, 'Aracaju': 550}
+destino = str(input('Qual será seu destino: ')).capitalize()
+comida = int(input('Quanto gastará em comida: '))
+valor_passeio = int(input('Passeios pago aparte: '))
 
-    return gastos_gasolina 
-gastos_gasolinia = gasolina(estados)
+hotel = lambda gastos_hotel: (gastos_hotel * 150)
+valor_total = hotel(periodo)
 
-valor_hotel = int(input('Quantos dias você vai passar? '))
-def hotel(diaria):
-    hotel_diaria = 0
-    hotel_diaria += diaria * 150
+def gasolina(onde, ask):
+    ida = 0
+    total = 0
+    for c, km in onde.items():
+        if ask == c:
+            ida += (km / 14) * 5
+            total += ida * 2              
+    return ida, total
+ida, total = gasolina(cidade, destino)
 
-    return hotel_diaria
-hotel_diaria = hotel(valor_hotel)
+def valor_geral(food, costs):
+    general_costs = food + costs
+    return general_costs
+general_costs = valor_geral(comida, valor_passeio)
 
-comida = int(input('valor gasto com comida? '))
-passeio = int(input('Valor gasto com passeio'))
-def passeio_geral_comida(geral):
-    geral = 0
-    resultado += comida + passeio
-
-    return resultado 
-resultado = passeio_geral_comida(comida, passeio)
+print('Com base nos gastos definidos, uma viagem de {} dias para {} saindo de Recife custaria {:.2f} reais, valores em comida e passeio {} reias'.format(periodo, destino, total, general_costs)) 
 
 
-print('Com base nos gastos definidos, uma viagem de {} dias para {} saindo de Recife custaria {} reais'.format())
+
